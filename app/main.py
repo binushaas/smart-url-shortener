@@ -11,7 +11,10 @@ from .models import ClickEvent, ShortURL
 from .schemas import URLCreate, URLCreated, URLStats
 from .services import create_short_url
 
-PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
+PUBLIC_BASE_URL = os.getenv(
+    "PUBLIC_BASE_URL",
+    "https://smart-url-shortener-ufi7.onrender.com"
+).rstrip("/")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -24,6 +27,7 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
