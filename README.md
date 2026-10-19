@@ -2,6 +2,16 @@
 
 A URL shortening REST API built using Python, FastAPI, SQLAlchemy, and SQLite.
 
+## Live Demo
+
+**Live Application:** https://smart-url-shortener-ufi7.onrender.com
+
+**API Documentation:** https://smart-url-shortener-ufi7.onrender.com/docs
+
+## Example
+
+Create a short URL using the API, visit the generated link, and view click analytics through the analytics endpoint.
+
 ## Features
 
 - Generate short links from long URLs
